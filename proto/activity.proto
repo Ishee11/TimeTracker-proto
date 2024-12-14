@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package activity;
+
+option go_package = "https://github.com/Ishee11/TimeTracker-proto/proto/activity";
+
+service ActivityService {
+  rpc AddActivity (AddActivityRequest) returns (AddActivityResponse);
+}
+
+message AddActivityRequest {
+  string type = 1;
+  string time = 2;
+  int32 duration = 3;
+  int32 user_id = 4;
+}
+
+message AddActivityResponse {
+  bool success = 1;
+  string message = 2;
+}
