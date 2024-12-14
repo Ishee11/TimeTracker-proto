@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package activity;
 
-option go_package = "https://github.com/Ishee11/TimeTracker-proto/proto/activity";
+option go_package = "/proto";
 
 service ActivityService {
   rpc AddActivity (AddActivityRequest) returns (AddActivityResponse);
